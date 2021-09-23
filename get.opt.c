@@ -14,12 +14,17 @@ void (*get_of_opcode_func(char *opcode))(stack_t **, unsigned int)
 {
 
 	instruction_t op_funcs[] = {
-	    {"push", _push},
-	    {"pall", _pall},
-	    {"pint", _pint},
-	    {"pop", _pop},
-	    {"swap", _swap},
-	    {NULL, NULL},
+		{"push", _push},
+		{"pall", _pall},
+		{"pint", _pint},
+		{"pop", _pop},
+		{"swap", _swap},
+		{"add", _add},
+		{"sub", _sub},
+		{"div", _div},
+		{"mul", _mul},
+		{"mod", _mod},
+		{NULL, NULL},
 	};
 
 	int i;
@@ -50,7 +55,7 @@ char *get_int(int num)
 	length = get_numbase_len(temp, 10);
 
 	if (num < 0 || num_l < 0)
-		length++;	  /* negative sign */
+		length++;			  /* negative sign */
 	ret = malloc(length + 1); /* create new string */
 	if (!ret)
 		return (NULL);
