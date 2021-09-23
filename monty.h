@@ -60,6 +60,7 @@ void set_op_tok_error(int error_code);
 int pop_error(unsigned int line_number);
 int short_stack_error(unsigned int line_number, char *op);
 int pint_error(unsigned int line_number);
+int div_error(unsigned int line_number);
 
 /* OPCODES MONTY FUNTIONS */
 void _push(stack_t **stack, unsigned int num_line);
@@ -67,6 +68,13 @@ void _pall(stack_t **stack, unsigned int num_line);
 void _pint(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
+
+/* ARITMETIC FUNCS */
+void _add(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void _mul(stack_t **stack, unsigned int line_number);
+void _mod(stack_t **stack, unsigned int line_number);
 
 /* FUNCTIONS STACKS */
 int run_monty(FILE *script_fd);

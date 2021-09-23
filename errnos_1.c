@@ -5,6 +5,7 @@ int malloc_err(void);
 int fd_open_err(char *fd);
 int Uknw_op_err(char *code, unsigned int line_number);
 int no_int_err(unsigned int line_number);
+int div_error(unsigned int line_number);
 
 /**
  * Bad_usage - Prints usage error messages.
@@ -42,7 +43,7 @@ int fd_open_err(char *fd)
 int Uknw_op_err(char *code, unsigned int line_number)
 {
 	fprintf(stderr, "L%u: unknown instruction %s\n",
-		line_number, code);
+			line_number, code);
 	return (EXIT_FAILURE);
 }
 
@@ -67,5 +68,17 @@ int malloc_err(void)
 int no_int_err(unsigned int line_number)
 {
 	fprintf(stderr, "L%u: usage: push integer\n", line_number);
+	return (EXIT_FAILURE);
+}
+
+/**
+ * div_error - Prints division error messages for division by 0.
+ * @line_number: Line number in Monty bytecodes file where error occurred.
+ *
+ * Return: (EXIT_FAILURE) always.
+ */
+int div_error(unsigned int line_number)
+{
+	fprintf(stderr, "L%u: division by zero\n", line_number);
 	return (EXIT_FAILURE);
 }
