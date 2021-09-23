@@ -1,5 +1,7 @@
 #include "monty.h"
 
+char **op_token = NULL;
+
 /**
  * main - the entry point for Monty Interp
  *
