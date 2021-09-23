@@ -1,0 +1,51 @@
+.TH man 2 "Septiembre 22, 2021" "Basic Usage monty man page"
+.SH NAME
+Monty
+.SH SYNOPSIS
+.B ./monty
+\fI\, USAGE \/\fR [\fI\,FILE\/\fR]...
+
+.SH DESCRIPTION
+(Monty Language) 0.98 is a scripting language that is
+first compiled into Monty byte codes (Just like Python).
+It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
+
+.I FUNTIONS...
+.SH OPTIONS
+operates in both
+.I interactive
+and
+.I non-interactive
+mode. The user may initiate
+.B simple shell
+and begin working or initate
+.B simple shell
+using commands meant to be run by the program.
+.SH ARGUMENTS
+The first argument, argument 0 is understood to be the command to be run by
+.B simple shell
+and arguments following as modifiers or options.
+.SH INVOCATION
+.B monty
+may be invoked with the same functionality in
+.I interactive
+or
+.I non-interactive
+mode. The user may quit the program by typing "exit", "Ctrl + D", on the command line.
+When the program quits or a command has been executed,
+.B simple shell
+returns with a new prompt: "$ "
+
+.B Example
+.IP
+
+$./monty
+
+$pwd
+
+.SH ERRORS
+So far some bugs have been found regarding
+the functionality of the program, this will be solved in the next few days.
+
+.SH AUTHORS
+Juan Duque
