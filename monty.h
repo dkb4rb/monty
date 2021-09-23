@@ -8,8 +8,6 @@
 #define STACK 0
 #define QUEUE 1
 
-#define _POSIX_C_SOURCE 200809L
-
 /** GLOBAL OPCODE TOKEN */
 extern char **op_token;
 
