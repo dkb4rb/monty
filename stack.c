@@ -2,7 +2,7 @@
 
 int stack_init(stack_t **stack);
 int get_mode(stack_t *stack);
-int free_stack(stack_t **stack);
+void free_stack(stack_t **stack);
 
 /**
  * stack_init - Initializes a stack_t stack with beginning
@@ -54,7 +54,7 @@ int get_mode(stack_t *stack)
  * Return: void
  */
 
-int free_stack(stack_t **stack)
+void free_stack(stack_t **stack)
 {
 	stack_t *tmp = *stack;
 

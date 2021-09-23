@@ -75,7 +75,7 @@ void _swap(stack_t **stack, unsigned int line_number);
 int run_monty(FILE *script_fd);
 int stack_init(stack_t **stack);
 int get_mode(stack_t *stack);
-int free_stack(stack_t **stack);
+void free_stack(stack_t **stack);
 
 unsigned int token_arr_len(void);
 char **strtow(char *str, char *delims);
@@ -96,5 +96,5 @@ char *get_int(int n);
 unsigned int _abs(int i);
 int get_numbase_len(unsigned int num, unsigned int base);
 void fill_numbase_buff(unsigned int num, unsigned int base,
-		       char *buff, int buff_size);
+					   char *buff, int buff_size);
 #endif /* MONTY_H */
