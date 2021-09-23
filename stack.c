@@ -51,7 +51,6 @@ int get_mode(stack_t *stack)
  * free_stack - Frees a stack_t stack.
  * @stack: A pointer to the top (stack) or
  *         bottom (queue) of a stack_t.
- * Return: void
  */
 
 void free_stack(stack_t **stack)
@@ -64,5 +63,4 @@ void free_stack(stack_t **stack)
 		free(*stack);
 		*stack = tmp;
 	}
-	return;
 }
