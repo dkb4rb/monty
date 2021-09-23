@@ -93,7 +93,7 @@ int empty_line(char *line, char *delims);
 
 void (*get_of_opcode_func(char *opcode))(stack_t **, unsigned int);
 
-void free_tokens(void);
+void free_stack(stack_t **stack);
 void set_op_tok_error(int error_code);
 char *get_int(int n);
 
