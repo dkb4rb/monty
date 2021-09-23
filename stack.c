@@ -48,20 +48,19 @@ int get_mode(stack_t *stack)
 }
 
 /**
- * free_stack - Frees a stack_t stack.
- * @stack: A pointer to the top (stack) or
- *         bottom (queue) of a stack_t.
+ * free_stack - function that frees a stack_t stack.
+ * @stack: top pointer of a doubly linked list.
+ * Return: nothing.
  */
 
 void free_stack(stack_t **stack)
 {
-	stack_t *tmp = *stack;
+	stack_t *aux;
 
 	while (*stack)
 	{
-		tmp = (*stack)->next;
-		free(*stack);
-		*stack = tmp;
+		aux = *stack;
+		*stack = (*stack)->prev;
+		free(aux);
 	}
-	return;
 }
