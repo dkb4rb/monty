@@ -65,7 +65,7 @@ int run_monty(FILE *script_fd)
 	if (stack_init(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 
-	while (getline(&line, &len, script_fd) != -1)
+	while (-1 != getline(&line, &len, script_fd))
 	{
 		num_line++;
 		op_token = strtow(line, DELIMITS);
