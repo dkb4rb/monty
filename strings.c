@@ -3,7 +3,7 @@
 unsigned int _abs(int i);
 int get_numbase_len(unsigned int num, unsigned int base);
 void fill_numbase_buff(unsigned int num, unsigned int base,
-		       char *buff, int buff_size);
+					   char *buff, int buff_size);
 unsigned int token_arr_len(void);
 
 /**
@@ -62,7 +62,7 @@ int get_numbase_len(unsigned int num, unsigned int base)
  * Return: always void.
  */
 void fill_numbase_buff(unsigned int num, unsigned int base,
-		       char *buff, int buff_size)
+					   char *buff, int buff_size)
 {
 	int rem, i = buff_size - 1;
 
@@ -70,7 +70,7 @@ void fill_numbase_buff(unsigned int num, unsigned int base,
 	while (i >= 0)
 	{
 		rem = num % base;
-		if (rem > 9)		    /* return lowercase ascii val representation */
+		if (rem > 9)			/* return lowercase ascii val representation */
 			buff[i] = rem + 87; /* 10 will be a, 11 = b, ... */
 		else
 			buff[i] = rem + '0';
