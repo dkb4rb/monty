@@ -1,0 +1,10 @@
+push 2
+pint
+push 5
+pint
+
+push 4
+
+pall
+
+

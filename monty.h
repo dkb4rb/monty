@@ -82,6 +82,7 @@ int stack_init(stack_t **stack);
 int get_mode(stack_t *stack);
 void free_stack(stack_t **stack);
 
+int _onto(stack_t **stack);
 unsigned int token_arr_len(void);
 char **strtow(char *str, char *delims);
 int is_delim(char ch, char *delims);
